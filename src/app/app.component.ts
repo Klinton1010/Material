@@ -7,4 +7,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Material';
+  hidden=false;
+  show=false;
+  load=0;
+  toggleBadgeVisibility()
+{
+  this.hidden=!this.hidden;
 }
+showSpinner()
+{
+  this.show=true;
+  setTimeout(()=>{this.show=false},5000)
+}
+
+loadspinner()
+{
+if(this.load<=100)
+ this.load++;
+}
+}
+
+
